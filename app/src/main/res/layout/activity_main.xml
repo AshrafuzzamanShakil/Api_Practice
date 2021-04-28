@@ -8,26 +8,14 @@
     android:orientation="vertical"
     android:padding="10dp"
     tools:context=".MainActivity">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="Recycle View">
 
-    </TextView>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecycleviewId"
         android:layout_width="match_parent"
-        android:padding="10dp"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="10dp">
 
     </androidx.recyclerview.widget.RecyclerView>
-
-
-
-
-
-
 
 
 </LinearLayout>

@@ -4,16 +4,22 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import static android.widget.Toast.LENGTH_LONG;
+
 public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.MyView> {
 
     private List<PostPojo> datalist;
     private Context context;
+
+
 
 
     public RecycleAdapter(Context context,List<PostPojo> datalist){
@@ -31,7 +37,16 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.MyView> 
 
     @Override
     public void onBindViewHolder(MyView myView, int i) {
-        myView.textView.setText(datalist.get(i).getBody());
+        myView.textView.setText(datalist.get(i).getTitle());
+        myView.useridtext.setText(datalist.get(i).getId());
+        myView.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context,"Clicked", LENGTH_LONG).show();
+            }
+        });
+
+
 
     }
 
@@ -42,11 +57,14 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.MyView> 
 
     class MyView extends RecyclerView.ViewHolder{
 
-        TextView textView ;
+        TextView textView,useridtext ;
+        LinearLayout linearLayout;
 
         public MyView(View itemView) {
             super(itemView);
             textView=itemView.findViewById(R.id.Textviewidrecycleview);
+            useridtext=itemView.findViewById(R.id.userid);
+            linearLayout=itemView.findViewById(R.id.parantlayoutid);
 
         }
     }

@@ -1,19 +1,19 @@
 package com.shakil.api_practice;
 
 public class PostPojo {
-    private float userId;
-    private float id;
+    private String userId;
+    private String id;
     private String title;
     private String body;
 
 
     // Getter Methods
 
-    public float getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public float getId() {
+    public String getId() {
         return id;
     }
 
@@ -27,11 +27,11 @@ public class PostPojo {
 
     // Setter Methods
 
-    public void setUserId(float userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
-    public void setId(float id) {
+    public void setId(String id) {
         this.id = id;
     }
 
