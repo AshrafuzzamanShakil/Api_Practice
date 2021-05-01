@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_200"
+    tools:context=".Detailes_activity">
+
+    <TextView
+        android:id="@+id/detailtextid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="18dp"
+        android:text="I am Shakil"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:shadowColor="@color/purple_700"
+        android:padding="15dp"
+        android:textStyle="italic"
+        >
+
+    </TextView>
+
+</LinearLayout>

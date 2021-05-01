@@ -1,6 +1,7 @@
 package com.shakil.api_practice;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.MyView> 
 
     private List<PostPojo> datalist;
     private Context context;
+    public static final String Body_text="com.shakil.api_practice.Body_text";
 
 
 
@@ -42,7 +44,10 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.MyView> 
         myView.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context,"Clicked", LENGTH_LONG).show();
+                String body= datalist.get(i).getBody().toString();
+                Intent intent=new Intent(context,Detailes_activity.class);
+                intent.putExtra(Body_text,body);
+                context.startActivity(intent);
             }
         });
 
